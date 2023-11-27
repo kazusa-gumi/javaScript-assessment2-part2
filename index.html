@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
     <h1>Student Management System</h1>
 
+    <!-- Add Student Section -->
     <section>
-        <h2>Search Student by ID</h2>
-        <input type="text" id="searchID">
-        <button id="searchButton">Search</button>
-        <p id="resultView"></p>
+        <h2>Add Student</h2>
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName">
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification">
+        <button id="submitButton">Submit</button>
     </section>
 
+    <!-- Display Student List Section -->
     <section>
         <h2>Display Student List</h2>
-        <table id="listView" class="full-width">
+        <button id="sortAscButton">Sort Ascending</button>
+        <button id="sortDescButton">Sort Descending</button>
+        <table id="studentListView">
             <thead>
                 <tr>
-                    <th>Index</th>
                     <th>ID</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -31,18 +43,18 @@
                 <!-- Student List will be appended here by JavaScript -->
             </tbody>
         </table>
-        <button id="refreshButton">Refresh</button>
     </section>
 
+    <!-- Search Student Section -->
     <section>
-        <h2>Add Student</h2>
-        Student ID: <input type="text" id="studentID"><br>
-        First Name: <input type="text" id="firstName"><br>
-        Last Name: <input type="text" id="lastName"><br>
-        Qualification: <input type="text" id="qualification"><br>
-        <button id="submitButton">Submit</button>
+        <h2>Search Student by ID</h2>
+        <input type="text" id="searchID">
+        <button id="searchButton">Search</button>
+        <button id="refreshSearchButton">Refresh</button>
+        <div id="resultView"></div>
     </section>
 
+    <script src="./js/student.list.js"></script>
     <script src="./js/app.js"></script>
 </body>
 
